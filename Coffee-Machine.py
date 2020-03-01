@@ -1,30 +1,41 @@
 # Coffee-Machine
 import time
-print ("Welcome to the Python Coffee Machine")
-# Asking the user how much money they wish to enter.
-number_of_10p = int(input("How many 10 Rupee Coins would you like to insert? "))
-while number_of_10p < 0:
-    number_of_10p = int(input("Please enter a positive number."))
-number_of_20p = int(input("How many 20 Rupee Notes would you like to insert? "))
-while number_of_20p < 0:
-    number_of_20p = int(input("Please enter a positive number."))
-number_of_50p = int(input("How many 50 Rupee Notes would you like to insert? "))
-while number_of_50p < 0:
-    number_of_50p = int(input("Please enter a positive number."))
-number_of_100p = int(input("How many 1 Rupee Notes would you like to insert? "))
-while number_of_100p < 0:
-    number_of_100p = int(input("Please enter a positive number."))
-# Creating a variable to store the total amount of money inserted into the vending machine.
-change = round(((number_of_10p * 10) + (number_of_20p * 20) + (number_of_50p * 50) + (number_of_100p * 100)),2)
-# Informing the user how much they have entered in total.
-print ("\nIn total you have entered Rs", change)
-time.sleep(2)
+
 # Creating variables for the 5 products and their respective prices. 
 product_1, product_1_price, product1Origin = "Cappacino", 500, "Italy"
 product_2, product_2_price, product2Origin = "Nescafe", 400, "Italy"
 product_3, product_3_price, product3Origin = "Crunchie", 450, "Italy"
 product_4, product_4_price, product4Origin = "Milky Way", 500, "New Zealand"
 product_5, product_5_price, product5Origin = "Boost", 600,"Australia"
+
+print ("Welcome to the Python Coffee Machine. Here is the Our List Of Coffee Available Rightnow")
+time.sleep(2)
+
+print ("Item: {}, Price {},Origin {} ".format(product_1, product_1_price, product1Origin))
+print ("Item: {}, Price {},Origin {} ".format(product_2, product_2_price, product2Origin))
+print ("Item: {}, Price {},Origin {} ".format(product_3, product_3_price, product3Origin))
+print ("Item: {}, Price {},Origin {} ".format(product_4, product_4_price, product4Origin))
+print ("Item: {}, Price {},Origin {} ".format(product_5, product_5_price, product5Origin))
+print ("")
+# Asking the user how much money they wish to enter.
+num_of_10 = int(input("How many 10 Rupee Coins would you like to insert? "))
+while num_of_10 < 0:
+    num_of_10 = int(input("Please enter a positive number."))
+num_of_20 = int(input("How many 20 Rupee Notes would you like to insert? "))
+while num_of_20 < 0:
+    num_of_20 = int(input("Please enter a positive number."))
+num_of_50 = int(input("How many 50 Rupee Notes would you like to insert? "))
+while num_of_50 < 0:
+    num_of_50 = int(input("Please enter a positive number."))
+num_of_100 = int(input("How many 100 Rupee Notes would you like to insert? "))
+while num_of_100 < 0:
+    num_of_100 = int(input("Please enter a positive number."))
+# Creating a variable to store the total amount of money inserted into the vending machine.
+change = round(((num_of_10) + (num_of_20 * 20) + (num_of_50 * 50) + (num_of_100 * 100)),2)
+# Informing the user how much they have entered in total.
+print ("\nIn total you have entered Rs", change)
+time.sleep(2)
+
 # Creating variables to track the number of each items bought,
 Cappacinoes_bought = 0
 Nescafe_bought = 0
@@ -34,11 +45,11 @@ boosts_bought = 0
 # Informing the user of the choices available and the prices that of each item.
 print ("There are 5 products available to pick from;\n")
 time.sleep(2)
-print ("Item: {}, Price {},Origin {} ".format(product_1, product_1_price, product1Origin))
-print ("Item: {}, Price {},Origin {} ".format(product_2, product_2_price, product2Origin))
-print ("Item: {}, Price {},Origin {} ".format(product_3, product_3_price, product3Origin))
-print ("Item: {}, Price {},Origin {} ".format(product_4, product_4_price, product4Origin))
-print ("Item: {}, Price {},Origin {} ".format(product_5, product_5_price, product5Origin))
+print ("Item: {}, Price {}".format(product_1, product_1_price))
+print ("Item: {}, Price {}".format(product_2, product_2_price))
+print ("Item: {}, Price {}".format(product_3, product_3_price))
+print ("Item: {}, Price {}".format(product_4, product_4_price))
+print ("Item: {}, Price {}".format(product_5, product_5_price))
 print ("")
 # Asking the user to make a selection.
 while change > 0:
